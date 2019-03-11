@@ -9,20 +9,27 @@ A Python script that displays your [Plex](https://www.plex.tv) status on [Discor
 * Use [websocket-client](https://github.com/websocket-client/websocket-client) version 0.48.0 (`pip install websocket-client==0.48.0`) as an issue with newer versions breaks the plexapi module's alert listener.
 * The script must be running on the same machine as your Discord client.
 
+## Changes
+All changes are made around my own personal use.
+
+* Changed up the indenting, and switched to snake_case scheme.
+
 ## Configuration
 
-Add your configuration(s) into the `plexConfigs` list on line 30.
+Create a .json file in the same directory as the python file.
 
 #### Example
 
-```python
-plexConfigs = [
-	plexConfig(serverName = "ABC", username = "xyz", password = "0tYD4UIC4Tb8X0nt"),
-	plexConfig(serverName = "DEF", username = "pqr@pqr.pqr", token = "70iU3GZrI54S76Tn", listenForUser = "xyz"),
-	plexConfig(serverName = "GHI", username = "xyz", password = "0tYD4UIC4Tb8X0nt", blacklistedLibraries = ["TV Shows", "Music"])
-]
-```
+I've gotten rid of the in-line credentials. New format is a json file with the parameters below.
 
+```json
+{
+  "serverName": "myserver",
+  "username": "myuser",
+  "password": "mypass"
+}
+``` 
+I kept the functionality for the other parameters as well.
 #### Parameters
 
 * `serverName` - Name of the Plex Media Server to connect to.
