@@ -14,6 +14,8 @@ All changes are made around my own personal use.
 
 * Changed up the indenting, and switched to snake_case scheme.
 
+I'm going to be doing a big refactor after cleaning up the files a bit, I might remove multi-user support as it's a pain for me.
+
 ## Configuration
 
 Create a .json file in the same directory as the python file.
